@@ -38,9 +38,6 @@ body {
   color: #ffffff;
 }
 
-
-
-
 .content {
 margin: -35px 100px;
 min-height: 80vh;
@@ -48,7 +45,7 @@ min-height: 80vh;
 padding: 45px;
 }
 
-.content h2, .orders h6 {
+.content h1, .orders h6 {
 text-align: center;
 color: #d3d3d3;
 }
@@ -73,71 +70,43 @@ border-bottom: 2px solid green;
 flex: 1;
 }
 
-.order-image img {
+.order-image p {
 margin: 0;
 height: 80px;
 width: 100px;
+color: #d3d3d3;
 }
 
 .content1 {
 flex: 3;
 }
-.content1 .title {
+.content1 {
 font-weight: bold;
-color: green;
+color: lightgrey;
 margin-bottom: 5px;
 font-size: 14px;
 
 }
-
-.content1 .title .price {
-background: #008000;
-color: #fff;
-border-radius: 5px;
-padding: 2px;
-font-size: 12px;
-}
-
-.order-item .order-button .button {
-display: inline-block;
-margin-top: auto;
+.Cancel-button, .Order-button{
 padding: 5px;
-color: #d35400;
+color: #ffffff;
 font-weight: bold;
 font-size: 12px;
 cursor: pointer;
-background: transparent;
 }
 
-.order-item .order-button .pending {
-background: #008000;
-color: #fff;
-border: 1px solid #90ee90;
-}
-
-.order-item .order-button .completed {
-background: #008000;
-border: 1px solid #008000;
-color: #fff;
-}
-
-.order-item .order-button .declined {
-background: #c0392b;
-border: 1px solid #c0392b;
-color: #fff;
-}
 .order-item .date {
 color: green;
 font-size: 12px;
 }
 
-.food-item {
+.delivery {
 margin: 10px 0;
 display: flex;
 flex-direction: row;
 flex-wrap: nowrap;
 justify-content: flex-start;
-border-bottom: 2px solid green;
+border-bottom: 2px solid lightgray;
 }
 
 @media screen and (max-width: 620px) {
@@ -155,7 +124,7 @@ padding: 14px;
 .topnav input[type=text] {
 border: 1px solid #ccc; 
 }
-.orders, .orders2, .orders .button {
+.orders, .orders .button {
 display: block;
 
 }
@@ -165,11 +134,7 @@ margin: 0px;
 width: auto;
 padding: 10px;
 }
-.orders2{
-float: left;
-width: auto;
-padding: 10px;
-}
+
 }
 
 .button {
