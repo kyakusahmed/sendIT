@@ -1,0 +1,136 @@
+* {box-sizing: border-box;}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background-color: grey;
+}
+.topnav {
+  overflow: hidden;
+  background-color:orange;
+  color: green;
+}
+.topnav h1{
+    float: left;
+    margin: auto;
+    padding: 10px;
+    text-transform: capitalize;
+    color: white;
+    font-size: 20px;
+    background-origin: padding-box;
+}
+.topnav a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding:  22px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.topnav a:hover {
+  background-color: grey;
+  color: #ffffff;
+}
+.topnav a.active {
+  background-color: grey;
+  color: #ffffff;
+}
+.main-content{
+  min-height: 30vh;
+}
+
+.heading{
+  color: green;
+}
+.login-page{
+  width: 600px;
+  padding: 5%;
+  margin: auto;
+}
+.form{
+  position: relative;
+  z-index: 1;
+  background: grey;
+  max-width: 760px;
+  margin: 0 auto 80px;
+  padding: 22px;
+  text-align: center;
+  margin-top: 25px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+.login-form input{
+  font-family: "roboto",sans-serif;
+  outline: 1;
+  background: #f2f2f2;
+  width: 100%;
+  border: 1px solid #ffa500;
+  margin: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-left: 0px;
+}
+
+.form p{
+  color: white;
+  font-family: sans-serif;
+}
+.login-form .button{
+  font-family: "roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-size: 15PX;
+  cursor: pointer;
+  border: 1px solid orange;
+  margin-top: 10px;
+
+}
+.form .button:hover,.form button:active{
+  background-color: orange;
+}
+.form .message{
+  margin: 15px;
+  color: #ffffff;
+}
+@media screen and (max-width: 620px) {
+  .login-page, .SignUp, .input[type=submit] {
+    width: auto;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.footer {
+    height: 60px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+    padding: 10px;
+
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
