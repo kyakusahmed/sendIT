@@ -57,7 +57,7 @@ body {
   margin: 0 auto 80px;
   padding: 22px;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 15px;
   border-radius: 5px;
   color: #ffffff;
 }
@@ -72,6 +72,10 @@ body {
   box-sizing: border-box;
   margin-left: 0px;
 }
+.login-form input:hover{
+  border: 1px solid grey;
+
+}
 
 .form p{
   color: white;
@@ -83,7 +87,7 @@ body {
   outline: 0;
   width: 100%;
   padding: 10px;
-  color: white;
+  color: orange;
   font-size: 15PX;
   cursor: pointer;
   border: 1px solid orange;
@@ -92,6 +96,7 @@ body {
 }
 .form .button:hover,.form button:active{
   background-color: orange;
+  color: #ffffff;
 }
 .form .message{
   margin: 15px;
