@@ -1,0 +1,189 @@
+* {box-sizing: border-box;}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background-color: grey;
+}
+.topnav {
+  overflow: hidden;
+  background-color:orange;
+  color: green;
+}
+.topnav h1{
+    float: left;
+    margin: auto;
+    padding: 10px;
+    text-transform: capitalize;
+    color: white;
+    font-size: 20px;
+    background-origin: padding-box;
+}
+.topnav a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding:  22px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.topnav a:hover {
+  background-color: grey;
+  color: #ffffff;
+}
+.topnav a.active {
+  background-color: grey;
+  color: #ffffff;
+}
+
+
+
+
+.content {
+margin: -35px 100px;
+min-height: 80vh;
+/* background-color: #ffffff; */
+padding: 45px;
+}
+
+.content h2, .orders h6 {
+text-align: center;
+color: #d3d3d3;
+}
+.orders .m2 {
+border-bottom: 3px solid lightgray;
+/* padding: 10px; */
+margin-bottom: 10px;
+/* background-color:  rgb(255, 168, 7); */
+color: lightgrey;
+text-align: center;
+}
+.order-item {
+margin: 10px 0;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-start;
+border-bottom: 2px solid green;
+}
+
+.order-image {
+flex: 1;
+}
+
+.order-image img {
+margin: 0;
+height: 80px;
+width: 100px;
+}
+
+.content1 {
+flex: 3;
+}
+.content1 .title {
+font-weight: bold;
+color: green;
+margin-bottom: 5px;
+font-size: 14px;
+
+}
+
+.content1 .title .price {
+background: #008000;
+color: #fff;
+border-radius: 5px;
+padding: 2px;
+font-size: 12px;
+}
+
+.order-item .order-button .button {
+display: inline-block;
+margin-top: auto;
+padding: 5px;
+color: #d35400;
+font-weight: bold;
+font-size: 12px;
+cursor: pointer;
+background: transparent;
+}
+
+.order-item .order-button .pending {
+background: #008000;
+color: #fff;
+border: 1px solid #90ee90;
+}
+
+.order-item .order-button .completed {
+background: #008000;
+border: 1px solid #008000;
+color: #fff;
+}
+
+.order-item .order-button .declined {
+background: #c0392b;
+border: 1px solid #c0392b;
+color: #fff;
+}
+.order-item .date {
+color: green;
+font-size: 12px;
+}
+
+.food-item {
+margin: 10px 0;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-start;
+border-bottom: 2px solid green;
+}
+
+@media screen and (max-width: 620px) {
+.topnav .search-container {
+float: none;
+}
+.topnav a, .topnav input[type=text], .topnav .search-container button {
+
+display: block;
+text-align: left;
+width: 100%;
+margin: 0;
+padding: 14px;
+}
+.topnav input[type=text] {
+border: 1px solid #ccc; 
+}
+.orders, .orders2, .orders .button {
+display: block;
+
+}
+.orders{
+float: none;
+margin: 0px;
+width: auto;
+padding: 10px;
+}
+.orders2{
+float: left;
+width: auto;
+padding: 10px;
+}
+}
+
+.button {
+font: bold 11px Arial;
+text-decoration: none;
+background-color: #EEEEEE;
+color: #333333;
+padding: 2px 6px 2px 6px;
+border-top: 1px solid #CCCCCC;
+border-right: 1px solid #333333;
+border-bottom: 1px solid #333333;
+border-left: 1px solid #CCCCCC;
+
+}
+
+  
+  
