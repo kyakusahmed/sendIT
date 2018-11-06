@@ -10,10 +10,10 @@
 <body>
 
 <div class="topnav">
-<h1>sIT</h1>
-<a href="contact.html">ContactUs</a>
-<a href="admin/Admin-In.html">Admin</a>
-<a class="active" href="#home">Home</a>
+<h1>SIT</h1>
+<a href="index.html">Signout</a>
+<a href="orders.html">Orders</a>
+<a class="active" href="#home">Main</a>
 </div>
 
 <div class="main-content">
@@ -21,77 +21,96 @@
       <h2>sendIT</h2>
       <h6><i></i></h6>
 
-      <div class="menu">
-        WEIGHTS LIST
-      </div>
-
-<form action="history.html" class="order-item">
-    <label for="Weights">Weights and Price</label>
-            <select id="country" name="country">
-                <option value="1">upto 1kg-15,000shs-small</option>
-                <option value="2">upto 1kg-25,000shs-big</option>
-                <option value="3">upto 2kg-30,000shs-small</option>
-                <option value="4">upto 2kg-45,000shs-big</option>
-                <option value="5">upto 5kg-60000shs-small</option>
-                <option value="6">upto 5kg-85,000shs-big</option>
-                <option value="7">upto 5kg-85,000shs-big</option>
+    <div class="menu">
+    MAKE ORDER
+    <hr>
+        <div class="field">
+            <P>If Recipient Is Registered</p>
+            <label>Select Username:</label>
+            <select class="field">
+                <option value="1">AHMED22</option>
+                <option value="2">Trevor</option>
+                <option value="2">okidi</option>
+                <option value="2">Samuel</option>
+                <option value="2">Json</option>
             </select>
-    
-    <div class="field"> 
-      
-        <select name="quantity" id="quantity">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="2">3</option>
-            <option value="2">4</option>
-            <option value="2">5</option>
-        </select>
-    </div>          
-       
+        </div>     
+        Recipient Not Registered
+    </div>
 
+    <form action="sender.html" class="order-item">
         <div class="order-content">
+            <div class="field">
+                <label>Full name:</label>
+                    <input type="text"  placeholder="Full name" required>
+                </div>
+                <div class="field">
+                    <label>Phone number:</label>
+                    <input type="phone_number"  placeholder="Phone number" required>
+                </div>
+                <div class="field">
+                    <label>select country:</label>
+                    <select class="field">
+                        <option value="1">Kenya</option>
+                        <option value="2">Tanzania</option>
+                        <option value="2">Rwanda</option>
+                        <option value="2">Burundi</option>
+                        <option value="2">U.A.E</option>
+                    </select>
+                </div>     
+                
+                <div class="field">
+                    <label>town/city and street name:</label>
+                    <input type="text"  placeholder="Destination location" required>
+                </div>
+                <div class="container">
+                    <label>select the weight range of your parcel:</label>
+                    <div class="radio-buttons">
+                        <label><input type="radio" name="weight-price" id="weight" checked value="1000"> 1kg</label>
+                        <label><input type="radio" name="weight-price" id="weight" value="25000"> 2kg</label>
+                        <label><input type="radio" name="weight-price" id="weight" value="50000"> 5kg</label>
+                    </div>
+                   
+                </div>              
+            </div>
+            <div class="price">
+                <label>Price</label>
+                <span id="show_price"></span>
+            </div>
+            <div class="order-button">
+                <button type="submit" class="button">Next</button>
+            </div>
 
-        <div class="field">  
-        <label>Pickup location:</label>         
-        <input type="text"  placeholder="Pickup location" required>
-         </div>
+        </form>
+<script>
 
-        <div class="field">
-        <label>Full name:</label>
-        <input type="text"  placeholder="Full name" required>
-        </div>
+var priceTag = document.getElementById('show_price')
+priceTag.innerHTML = '500 UGX'
 
-        <div class="field">
-        <label>Phone number:</label>
-        <input type="text"  placeholder="Phone number" required>
-         </div>
+var weight_price = document.getElementsByName('weight-price')
+//console.log(weight_price)
 
-        <div class="field">
-        <label>destination location:</label>
-        <input type="text"  placeholder="Destination location" required>
-         </div>
+document.getElementById('weight_price').addEventListener('change', function () {
+    console.log('234356')
+})
 
-        <div class="field">
-        <label>Full name:</label>
-        <input type="text"  placeholder="Full name" required>
-        </div>
+    for( let weight of weight_price) {
+        if (weight.checked) {
+            console.log(weight.value)
+        }
+        
+    }
 
-        <div class="field">
-        <label>Phone number:</label>
-        <input type="text"  placeholder="Phone number" required>
-        </div>
+function myFunction() {
+    var price = document.getElementById("myCheck");
+    var text = document.getElementById("text");
+    if (checkBox.checked == true){
+        text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
 
-      
-
-       
-    </div>
-    <div class="order-button">
-        <button type="submit" class="button">Order Now</button>
-    </div>
-</form>
+}
+</script>
 </body>
 </html>
-
-
-
-
