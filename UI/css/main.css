@@ -10,15 +10,18 @@ body {
   overflow: hidden;
   background-color:orange;
   color: green;
+  padding: 0 100px;
+  
 }
 .topnav h1{
-    float: left;
-    margin: auto;
-    padding: 10px;
-    text-transform: capitalize;
-    color: white;
-    font-size: 20px;
-    background-origin: padding-box;
+  float: left;
+  padding: 4px;
+  color: #ffffff;
+  font-size: 20px;
+  background-origin: padding-box;
+  border-radius: 50%;
+  background-color: orange;
+  border: 2px solid #ffffff;
 }
 .topnav a {
   float: right;
@@ -47,7 +50,6 @@ body {
   width: 60%;
   margin: auto;
   box-sizing: border-box;
- 
 }
 
 .orders h2, .orders h6 {
@@ -60,8 +62,18 @@ body {
   padding: 10px;
   margin-bottom: 5px;
   color: lightgray;
-
+  margin-top: -30px;
 }
+
+.menu .field{
+  margin: -13px 0 60px 6px;
+  width: 52%;
+  height: 30px;
+}
+.menu P{
+  margin-left: 3px;
+}
+
 .order-item {
   margin: 10px 0;
   display: flex;
@@ -87,49 +99,31 @@ body {
 }
 
 .order-item .order-button .button {
-  display: inline-block;
-  margin-top: auto;
-  padding: 5px;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 12px;
-  cursor: pointer;
-  background:lightgrey;
-  border: 1px solid #d3d3d3;
+display: block;
+margin-top: auto;
+padding: 5px;
+color: #ffffff;
+font-weight: bold;
+font-size: 12px;
+cursor: pointer;
+background:lightgrey;
+border: 1px solid #d3d3d3;
 }
 
 .order-item .order-button .button:hover{
   background-color: #ffffff;
   color:#808080;
-
 }  
-
-.order-item .order-button .pending {
-  background: #d35400 !important;
-  color: #fff;
-}
-
-.order-item .order-button .completed {
-  background: #27ae60 !important;
-  border: 1px solid #27ae60;
-  color: #fff;
-}
-
-.order-item .order-button .declined {
-  background: #c0392b !important;
-  border: 1px solid #c0392b;
-  color: #fff;
-}
 
 .order-item .field {
   margin: 10px;
   margin-bottom: 10PX;
   display: block;
- 
 }
+
 .order-item label{
-  margin: 10px 0 0 10px;
-  color: #d3d3d3;
+margin: 10px 0 0 10px;
+color: #d3d3d3;
 }
 
 #country{
@@ -137,22 +131,67 @@ body {
   margin: 10px 0 0 10px;
 }
 .order-item .field input {
-  border: 1px solid #7f8c8d;
-  padding: 8px;
-  width: 90%;
-  margin: 8px;
-  display: block;
+border: 1px solid #7f8c8d;
+padding: 8px;
+width: 52%;
+margin: 8px;
+display: block;
 }
 
 .order-item .field select {
-  border: 1px solid #7f8c8d;
-  padding: 6px;
-  width: 90%;
-  margin-left: 5px;
-  background-color: #ffffff;
+border: 1px solid #7f8c8d;
+padding: 6px;
+width: 52%;
+margin-left: 9px;
+background-color: #ffffff;
 }
 
 .order-item .date {
   color: #2c3e50;
   font-size: 12px;
+}
+
+a.button {
+font: bold 11px Arial;
+text-decoration: none;
+background-color: #EEEEEE;
+color: #333333;
+padding: 2px 6px 2px 6px;
+border-top: 1px solid #CCCCCC;
+border-left: 1px solid #CCCCCC;
+display: inline-block;
+margin: 10px 0px 10px 19px;
+width: 10%;
+}
+.order-content .container{
+  margin: 10px;
+}
+
+.radio-buttons  {
+  margin: 10px;
+}
+
+.price{
+  margin-top: 80px;
+  margin-bottom: 140px;
+  padding: 3px;
+  background-color: white;
+  width: 10%;
+  margin-left: -50PX;}
+
+.price{
+  background-color: orange;
+  height: 20%;
+  width: 10%;
+  margin: 110px 120px 0 -150px;
+  border-radius: 50%;
+  padding: 20px;
+}
+.price label{
+  margin: auto;
+  font-weight: bold;
+  color: white;
+}
+.price span{
+  color: white;
 }
