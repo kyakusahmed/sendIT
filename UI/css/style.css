@@ -10,15 +10,18 @@ body {
   overflow: hidden;
   background-color:orange;
   color: green;
+  padding: 0 100px;
 }
 .topnav h1{
     float: left;
-    margin: auto;
-    padding: 10px;
-    text-transform: capitalize;
-    color: white;
+    padding: 4px;
+    color:  #ffffff;
     font-size: 20px;
     background-origin: padding-box;
+    border-radius: 50%;
+    background-color: #ffa500;
+    border: 2px solid #ffffff;
+    
 }
 .topnav a {
   float: right;
@@ -28,6 +31,7 @@ body {
   padding:  22px;
   text-decoration: none;
   font-size: 16px;
+  
 }
 .topnav a:hover {
   background-color: grey;
@@ -57,7 +61,7 @@ body {
   margin: 0 auto 80px;
   padding: 22px;
   text-align: center;
-  margin-top: 15px;
+  margin-top: -45px;
   border-radius: 5px;
   color: #ffffff;
 }
@@ -138,4 +142,23 @@ body {
   .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
+}
+
+.order-item {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border-bottom: 3px dotted #ffffff;
+}
+
+.order-image {
+  flex: 1;
+}
+
+.order-image img {
+  margin: 0;
+  height: 80px;
+  width: 100px;
 }
