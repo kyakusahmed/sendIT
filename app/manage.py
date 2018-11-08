@@ -20,7 +20,7 @@ class Order:
         {"full_name":"ahmad", "phone_number": "256706196611", "select_country":"uganda", "destination":"kampala"
         },
         "sender":{
-            "full_name":"shaqiri", "phone_number": "256706192255", "select_country":"kenya", "destination":"nairobi"
+            "full_name":"shaqiri", "phone_number": "256706192255", "select_country":"kenya", "pickup_loc":"nairobi"
         },
 
         "parcel_details":{

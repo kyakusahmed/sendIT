@@ -31,9 +31,13 @@ def get_order(id):
         return jsonify({"message": 'order not found'}), 404
     return jsonify({"order": parcel_order}), 200     
 
-@app2.route('/api/v1/orders/<int:id>', methods=['PUT'])
-def cancel_parcel_delivery_order(id):
+@app2.route('/api/v1/parcel_orders/<int:id>', methods=['PUT'])
+def update_status(id):
     get_input = request.get_json()
     if not get_input.get("status"):
         return jsonify({"error" : "status is required"}), 200
     return jsonify({"order" : order.cancel_parcel_delivery_order(id, get_input["status"])}), 200
+    
+
+# @app2.route('/api/v1/parcel_orders/<int:user_id>', methods=['GET'])
+# def 

@@ -32,7 +32,7 @@ class OrderTest(unittest.TestCase):
         data = json.loads(response.get_data(as_text=True))
         assert data['order'][0]['id'] == 1
         assert data['order'][0]['recipient'] == {"full_name":"ahmad", "phone_number": "256706196611", "select_country":"uganda", "destination":"kampala"}
-        assert data['order'][0]['sender'] == {"full_name":"shaqiri", "phone_number": "256706192255", "select_country":"kenya", "destination":"nairobi"}
+        assert data['order'][0]['sender'] == {"full_name":"shaqiri", "phone_number": "256706192255", "select_country":"kenya", "pickup_loc":"nairobi"}
         assert response.status_code == 200
 
     def test_update_status(self):
