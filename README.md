@@ -16,7 +16,7 @@ Make sure that python 3.4/3.5/3.6/3.7 is installed on your computer
 
 Clone the repo
 ```
-git clone https://github.com/kyakusahmed/fast-foods.git
+git clone https://github.com/kyakusahmed/sendIT.git
 ```
 Change to the app directory
 ```
@@ -47,11 +47,15 @@ $ python run.py
 
 | tasks               |    URLS                |  METHOD  |         PARAMS              | 
 | ------------------- | -----------------------|----------|-----------------------------|
-| get all orders      | api/v1/orders          |  GET     |   ---------------           |
-| get aspecific order | api/v1/orders/id       |  GET     |   ---------------           |
-| post an order       | api/v1/orders          |  POST    | foodid, userid, date, status| 
-| update the status   | api/v1/orders/id       |  PUT     | status                      |
+| get all orders      | api/v1/parcels         |  GET     |   ---------------           |
+| get aspecific order | api/v1/parcelss/id     |  GET     |   ---------------           |
+| user posts an order | api/v1/parcels         |  POST    | recipient, sender, status   | 
+| user cancels order  | api/v1/parcels/id      |  PUT     | status                      |
 |                     |                        |          |                             |
+| Fetch all parcel    | api/v1/users/user_id/  | GET      | user_id                     |
+| delivery orders     | parcels                |          |                             |
+| by a specific user  |                        |          |                             |
+                                        
 	
 ### How to run the Tests:
 
