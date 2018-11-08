@@ -5,7 +5,6 @@ SendIT is a courier service that helps users deliver parcels to different destin
 
 
 [GH-PAGES](https://kyakusahmed.github.io/fast-foods/UI/)
-
 ### How to run the app
 
 
