@@ -1,0 +1,4 @@
+sitenv/*
+Thumbs.db
+.vscode
+__pycache__
