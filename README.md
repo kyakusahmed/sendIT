@@ -3,7 +3,11 @@ SendIT is a courier service that helps users deliver parcels to different destin
 
 [![Build Status](https://travis-ci.org/kyakusahmed/sendIT.svg?branch=apv1)](https://travis-ci.org/kyakusahmed/sendIT)
 [![Coverage Status](https://coveralls.io/repos/github/kyakusahmed/sendIT/badge.svg?branch=apv1)](https://coveralls.io/github/kyakusahmed/sendIT?branch=apv1)
+
+
 [gh-pages](https://kyakusahmed.github.io/sendIT/UI/)
+
+
 ### How to run the app
 
 
