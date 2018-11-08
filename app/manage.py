@@ -9,17 +9,8 @@ class Order:
     def __init__(self):
         self.delivery_orders = delivery_orders
 
-   
-    def search_order(self, id):
-        order = [order for order in self.delivery_orders if order['id'] == int(id)]
-        if order:
-            return order
-        return None    
+    def get_all_orders(self):
+        """Get list of all orders."""
+        return self.delivery_orders
 
     
-
-
-
-
-   
-   
