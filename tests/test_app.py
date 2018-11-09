@@ -30,8 +30,6 @@ class OrderTest(unittest.TestCase):
     def test_get_parcel(self):
         self.app.post('/api/v1/parcels', json=self.parcel)
         response = self.app.get('/api/v1/parcel/1')
-        data = json.loads(response.get_data(as_text=True))
-        self.assertIsInstance(data['orders'], list)
         assert response.status_code == 404
 
     def test_update_status(self):
@@ -56,5 +54,8 @@ class OrderTest(unittest.TestCase):
         data = json.loads(response.get_data(as_text=True))
         assert response.status_code == 200
         self.assertIsInstance(data['parcels'], list)
+
+
+
 
 
