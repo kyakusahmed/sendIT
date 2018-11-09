@@ -3,6 +3,7 @@ SendIT is a courier service that helps users deliver parcels to different destin
 
 [![Build Status](https://travis-ci.org/kyakusahmed/sendIT.svg?branch=apv1)](https://travis-ci.org/kyakusahmed/sendIT)
 [![Coverage Status](https://coveralls.io/repos/github/kyakusahmed/sendIT/badge.svg?branch=apv1)](https://coveralls.io/github/kyakusahmed/sendIT?branch=apv1)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c82ecad659fb6815446d/maintainability)](https://codeclimate.com/github/kyakusahmed/sendIT/maintainability)
 
 
 [gh-pages](https://kyakusahmed.github.io/sendIT/UI/)
@@ -15,7 +16,7 @@ Make sure that python 3.4/3.5/3.6/3.7 is installed on your computer
 
 Clone the repo
 ```
-git clone https://github.com/kyakusahmed/fast-foods.git
+git clone https://github.com/kyakusahmed/sendIT.git
 ```
 Change to the app directory
 ```
@@ -46,11 +47,21 @@ $ python run.py
 
 | tasks               |    URLS                |  METHOD  |         PARAMS              | 
 | ------------------- | -----------------------|----------|-----------------------------|
-| get all orders      | api/v1/orders          |  GET     |   ---------------           |
-| get aspecific order | api/v1/orders/id       |  GET     |   ---------------           |
-| post an order       | api/v1/orders          |  POST    | foodid, userid, date, status| 
-| update the status   | api/v1/orders/id       |  PUT     | status                      |
+| get all parcels     | api/v1/parcels         |  GET     |   ---------------           |
 |                     |                        |          |                             |
+| get a specific      | api/v1/parcels/id      |  GET     |  id                         |
+| parcel order        |                        |          |                             |
+|                     |                        |          |                             |
+| user posts a parcel | api/v1/parcels         |  POST    | sender_id, location, name,  | 
+|                     |                        |          | phone, country, destination,| 
+|	              |			       |	  | weight, price               | 
+|                     |                        |          |                             |
+| user updates parcel | api/v1/parcels/id      |  PUT     | status                      |
+|                     |                        |          |                             |
+| Fetch all parcel    | api/v1/users/user_id/  | GET      | user_id                     |
+| delivery orders     | parcels                |          |                             |
+| by a specific user  |                        |          |                             |
+                                        
 	
 ### How to run the Tests:
 
