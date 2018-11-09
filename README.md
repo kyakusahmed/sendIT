@@ -47,10 +47,16 @@ $ python run.py
 
 | tasks               |    URLS                |  METHOD  |         PARAMS              | 
 | ------------------- | -----------------------|----------|-----------------------------|
-| get all orders      | api/v1/parcels         |  GET     |   ---------------           |
-| get aspecific order | api/v1/parcelss/id     |  GET     |   ---------------           |
-| user posts an order | api/v1/parcels         |  POST    | recipient, sender, status   | 
-| user cancels order  | api/v1/parcels/id      |  PUT     | status                      |
+| get all parcels     | api/v1/parcels         |  GET     |   ---------------           |
+|                     |                        |          |                             |
+| get a specific      | api/v1/parcels/id      |  GET     |  id                         |
+| parcel order        |                        |          |                             |
+|                     |                        |          |                             |
+| user posts a parcel | api/v1/parcels         |  POST    | sender_id, location, name,  | 
+|                     |                        |          | phone, country, destination,| 
+|	              |			       |	  | weight, price               | 
+|                     |                        |          |                             |
+| user updates parcel | api/v1/parcels/id      |  PUT     | status                      |
 |                     |                        |          |                             |
 | Fetch all parcel    | api/v1/users/user_id/  | GET      | user_id                     |
 | delivery orders     | parcels                |          |                             |
