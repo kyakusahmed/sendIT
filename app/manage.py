@@ -10,7 +10,7 @@ class Parcel:
         self.parcels = parcels
 
     def get_all_parcels(self):
-        """Get list of all parcels."""
+        """get list of all parcels."""
         return self.parcels
 
     def add_parcel(self, sender_id, location, name, phone, country, destination, weight, price):
@@ -49,5 +49,4 @@ class Parcel:
             return parcel
         return None  
 
-    # def get_all_parcels_of_user(self, fullname):
-    #         pass
+    
