@@ -1,55 +1,53 @@
 from datetime import datetime
 from flask import request
 
-delivery_orders = []
+parcels = []
 
-class Order:
-    """Class to manipulate delivery order."""
+class Parcel:
+    """Class to manipulate parcels."""
 
     def __init__(self):
-        self.delivery_orders = delivery_orders
+        self.parcels = parcels
 
-    def get_all_orders(self):
-        """Get list of all orders."""
-        return self.delivery_orders
+    def get_all_parcels(self):
+        """Get list of all parcels."""
+        return self.parcels
 
-    def add_order(self, recipient, sender, parcel_details):
-        """Create New order."""
-        order = {"id": len(self.delivery_orders) + 1, 
-        "recipient":
-        {"full_name":"ahmad", "phone_number": "256706196611", "select_country":"uganda", "destination":"kampala"
-        },
-        "sender":{
-            "full_name":"shaqiri", "phone_number": "256706192255", "select_country":"kenya", "pickup_loc":"nairobi"
-        },
-
-        "parcel_details":{
-            "weight_range": "1kg", "price":"500k", "created_at": str(datetime.now())
-        },
-        "status":"pending"
+    def add_parcel(self, sender_id, location, name, phone, country, destination, weight, price):
+        """add new parcel."""
+        parcel = {
+            "id": len(self.parcels)+1,
+            "sender_id": sender_id,
+            "pickup_location": location,
+            "recepient_name": name, 
+            "recepient_phone": phone, 
+            "country":country, 
+            "destination": destination,
+            "parcel_weight": weight,
+            "parcel_price": price,
+            "status": "Pending",
+            "created": str(datetime.now())
         }
-        self.delivery_orders.append(order)
-        return order
+        self.parcels.append(parcel)
+        return parcel
 
-    def search_order(self, id):
-        order = [order for order in self.delivery_orders if order['id'] == int(id)]
-        if order:
-            return order
-        return None    
+    def search_parcel(self, id):
+        parcel = [parcel for parcel in self.parcels if parcel['id'] == int(id)]
+        return parcel 
 
-    def get_order(self, id):
-        return self.search_order(id)
+    def search_sender_parcels(self, sender_id):
+        parcels = [parcel for parcel in self.parcels if parcel['sender_id'] == int(sender_id)]
+        return parcels
 
-    def cancel_parcel_delivery_order(self, id, status):
-        order = self.search_order(id)
+    def get_parcel(self, id):
+        return self.search_parcel(id)
 
-        if order:
-            order[0].update({"status": status})
-            return order
-        return "Order not found"        
+    def update_parcel_status(self, id, status):
+        parcel = self.search_parcel(id)
+        if parcel:
+            parcel[0].update({"status": status})
+            return parcel
+        return None  
 
-
-
-
-   
-   
+    # def get_all_parcels_of_user(self, fullname):
+    #         pass
