@@ -53,7 +53,16 @@ class OrderTest(unittest.TestCase):
         data = json.loads(response.get_data(as_text=True))
         assert response.status_code == 200
         self.assertIsInstance(data['parcels'], list)
+   
+    def test_add_parcel(self):
+        response=self.app.post('/api/v1/parcels', json=self.parcel)
+        data = json.loads(response.get_data(as_text=True))
+        # self.assertIsInstance(data['parcels'], list)
+        assert response.status_code == 200
 
+        
+         
 
+         
 
 
