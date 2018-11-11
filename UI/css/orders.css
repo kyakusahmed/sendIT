@@ -118,7 +118,7 @@ border-bottom: 2px solid lightgray;
 .topnav .search-container {
 float: none;
 }
-.topnav a, .topnav input[type=text], .topnav .search-container button {
+.topnav a,.topnav input[type=text], .topnav .search-container button {
 
 display: block;
 text-align: left;
@@ -222,6 +222,14 @@ border-left: 1px solid #CCCCCC;
 
 .status-button{
   display: inline-block;
+}
+
+@media screen and (max-width:300px) {
+  .topnav h1{
+    float:left;
+    margin-left:5px;
+  }
+
 }
 
 

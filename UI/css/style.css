@@ -113,7 +113,10 @@ body {
   }
 }
 @media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+  .text {
+    font-size: 11px;
+
+  }
 }
 .footer {
     height: 60px;
@@ -136,7 +139,7 @@ body {
     display: block;
     text-align: left;
     width: 100%;
-    margin: 0;
+    margin: 10px;
     padding: 14px;
   }
   .topnav input[type=text] {
