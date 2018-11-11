@@ -13,7 +13,6 @@ body {
   background-color:orange;
   color: green;
   padding: 0 100px;
-  
 }
 .topnav h1{
   float: left;
@@ -42,18 +41,15 @@ body {
   background-color: grey;
   color: #ffffff;
 }
-
 .main-content {
   margin-bottom: 20px;
   min-height: 80vh;
 }
-
 .orders {
   width: 60%;
   margin: auto;
   box-sizing: border-box;
 }
-
 .orders h2, .orders h6 {
   text-align: center;
   font-size: 32px;
