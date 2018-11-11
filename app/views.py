@@ -28,8 +28,7 @@ def add_parcel():
     elif not data.get('price'):
         return jsonify({"error": "price required"}), 200
 
-    save_parcel = parcel.add_parcel(
-        data['sender_id'], 
+    save_parcel = parcel.add_parcel(data['sender_id'], 
         data['location'], 
         data['recepient_name'],
         data['recepient_phone'],
@@ -38,9 +37,9 @@ def add_parcel():
         data['weight'],
         data['price'],
     )
-    return jsonify({ "parcel": save_parcel}), 201
+    return jsonify({"parcel": save_parcel}), 201
     
-@app2.route('/api/v1/parcel/<int:id>', methods=['GET'])
+@app2.route('/api/v1/parcels/<int:id>', methods=['GET'])
 def get_parcel(id):
     """get specific order."""
     parcel2 = parcel.search_parcel(id)
@@ -69,4 +68,4 @@ def update_status(id):
 @app2.route('/api/v1/parcels/sender/<int:sender_id>', methods=['GET'])
 def get_all_parcels_by_user(sender_id):
     sender_parcels = parcel.search_sender_parcels(sender_id)
-    return jsonify({ 'parcels': sender_parcels })
+    return jsonify({'parcels': sender_parcels})
