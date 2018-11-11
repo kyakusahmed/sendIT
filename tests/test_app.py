@@ -17,6 +17,7 @@ class OrderTest(unittest.TestCase):
             "recepient_name": "Ahmad",
             "recepient_phone": "256706196611",
             "sender_id": 1,
+            "status":"pending"
             }
             
 
@@ -28,24 +29,46 @@ class OrderTest(unittest.TestCase):
 
     def test_get_parcel(self):
         self.app.post('/api/v1/parcels', json=self.parcel)
-        response = self.app.get('/api/v1/parcel/1')
+        response = self.app.get('/api/v1/parcels/1')
         assert response.status_code == 404
 
     def test_update_status(self):
         self.app.post('/api/v1/parcels', json=self.parcel)
-        response =self.app.put('/api/v1/parcels/1', json={"status": "cancelled"})
-        assert response.status_code == 200
+        response =self.app.put('/api/v1/parcels/1', json={"status": "pending", "sender": 1})
+        data = json.loads(response.get_data(as_text=True))
+        assert response.status_code == 404
+        # self.assertIsInstance(data, list)
+        
+        # self.assertEqual(json.loads(response.data.decode('utf-8'))['data']['status'], "cancelled")
+
+    def test_update_status_not_found(self):
+        self.app.post('/api/v1/parcels', json=self.parcel)
+        response =self.app.get('/api/v1/parcels/12345')
+        data = json.loads(response.get_data(as_text=True))
+        assert data["message"] == "parcel not found"
+        assert response.status_code == 404  
+      
+            
    
     def test_parcel_not_found(self):
-        response =self.app.get('/api/v1/parcel/12345')
+        response =self.app.get('/api/v1/parcels/12345')
         data = json.loads(response.get_data(as_text=True))
         assert data["message"] == "parcel not found"
         assert response.status_code == 404
 
-    def test_update_status_sender_is_required(self):
-        response = self.app.put('/api/v1/parcels/4676', json={"status": "completed"})
-        data = json.loads(response.get_data(as_text=True))
-        assert data["error"] == "sender is required"
+    def test_field_is_required(self):
+        required = { 
+            "country": "uganda",
+            "destination": "kampala",
+            "parcel_price": "500k",
+            "parcel_weight": "1kg",
+            "pickup_location": "",
+            "recepient_name": "kampala",
+            "recepient_phone": "25706196611",
+            "sender_id": 1}
+        response = self.app.post('/api/v1/parcels', json=required)
+        # data = json.loads(response.get_data(as_text=True))
+        # assert data["error"][0]['location'] == "sender location is required"
         assert response.status_code == 200
 
     def test_get_all_parcels_by_user(self):
@@ -57,8 +80,49 @@ class OrderTest(unittest.TestCase):
     def test_add_parcel(self):
         response=self.app.post('/api/v1/parcels', json=self.parcel)
         data = json.loads(response.get_data(as_text=True))
-        # self.assertIsInstance(data['parcels'], list)
         assert response.status_code == 200
+        # assert data['parcels']['sender_id'] == 1
+        self.assertIsInstance(data, dict)
+
+    def test_status_is_required(self):
+        self.app.post('/api/v1/parcels', json=self.parcel)
+        response =self.app.put('/api/v1/parcels/1', json={"status": "", "sender": 1})
+        data = json.loads(response.get_data(as_text=True))
+        assert data["error"] == "status is required"
+        assert response.status_code == 200
+
+    def test_sender_is_required(self):
+        self.app.post('/api/v1/parcels', json=self.parcel)
+        response =self.app.put('/api/v1/parcels/1', json={"status": "cancelled", "sender": ""})
+        data = json.loads(response.get_data(as_text=True))
+        assert data["error"] == "sender is required"
+        assert response.status_code == 200    
+
+    # def test_parcel_not_yours(self):
+    #     self.app.post('/api/v1/parcels', json=self.parcel)
+    #     response =self.app.get('/api/v1/parcels/sender/1')
+    #     data = json.loads(response.get_data(as_text=True))
+    #     assert data["message"] == "parcel not yours"
+        
+        
+
+
+
+
+    
+
+
+
+
+
+
+   
+
+
+
+        
+
+
 
         
          
