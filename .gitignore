@@ -1,2 +1,4 @@
 thumbs.db
 sitenv/*
+__pycache__
+.vscode
