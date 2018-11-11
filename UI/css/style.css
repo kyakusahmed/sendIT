@@ -1,10 +1,13 @@
 * {box-sizing: border-box;}
 body {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/parcel.jpg") ;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   min-height: 100vh;
-  background-color: grey;
+
 }
 .topnav {
   overflow: hidden;
@@ -56,12 +59,12 @@ body {
 .form{
   position: relative;
   z-index: 1;
-  background: grey;
+  background: rgb(red, green, blue);
   max-width: 760px;
   margin: 0 auto 80px;
   padding: 22px;
   text-align: center;
-  margin-top: -45px;
+  margin-top: auto;
   border-radius: 5px;
   color: #ffffff;
 }

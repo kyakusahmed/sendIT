@@ -1,10 +1,12 @@
 * {box-sizing: border-box;}
 body {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/parcel.jpg") ;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   min-height: 100vh;
-  background-color: grey;
 }
 .topnav {
   overflow: hidden;
@@ -202,11 +204,11 @@ width: 10%;
     margin-bottom: 100px;
     margin-top: 6px;
     width: 80%;
-    margin-left: 0px;
+    margin-left: 4px;
 
   }
   .price{
-    margin: 120px -50px 10px 10px;
+    margin: 120px -50px 10px -80px;
     padding: 30px; 
   }
   .order-item .field{
@@ -214,8 +216,11 @@ width: 10%;
   }
   .price label, .price span{
     margin: -25px;
-
   }
+  .topnav a{
+    display: block;
+  }
+
   
 }
   
